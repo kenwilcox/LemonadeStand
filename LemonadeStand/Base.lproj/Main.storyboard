@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,7 +46,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Step 2: Mix Your Lemonade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvb-bJ-pqo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 2: Mix Your Lemonade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvb-bJ-pqo">
                                 <rect key="frame" x="16" y="242" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,15 +60,27 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tPH-sw-Pfl">
                                 <rect key="frame" x="490" y="154" width="94" height="29"/>
+                                <connections>
+                                    <action selector="lemonPurchaseValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HvI-IB-YQh"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ssd-0r-drd">
                                 <rect key="frame" x="490" y="191" width="94" height="29"/>
+                                <connections>
+                                    <action selector="iceCubePurchaseValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="FH1-mw-Hvw"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YCY-RN-6Wf">
                                 <rect key="frame" x="490" y="298" width="94" height="29"/>
+                                <connections>
+                                    <action selector="lemonMixValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YWt-LS-a4G"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-lQ-rkj">
                                 <rect key="frame" x="490" y="335" width="94" height="29"/>
+                                <connections>
+                                    <action selector="iceCubeMixValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dhc-oi-kmy"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piB-s8-aWq">
                                 <rect key="frame" x="263" y="550" width="99" height="30"/>
@@ -125,25 +136,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Do your customers prefer more lemon or more ice today?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqi-HY-T6B">
-                                <rect key="frame" x="33" y="271" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vqi-HY-T6B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="4kI-Cv-lS3"/>
                             <constraint firstAttribute="trailing" secondItem="YCY-RN-6Wf" secondAttribute="trailing" constant="16" id="9Pe-VZ-759"/>
                             <constraint firstAttribute="trailing" secondItem="fIe-lQ-rkj" secondAttribute="trailing" constant="16" id="Ejf-59-r1a"/>
-                            <constraint firstItem="Vqi-HY-T6B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="OFO-zU-jQT"/>
                             <constraint firstAttribute="centerX" secondItem="DfL-o8-MrZ" secondAttribute="centerX" id="Sg7-ed-2Nf"/>
                             <constraint firstAttribute="centerX" secondItem="uTX-Zb-h4e" secondAttribute="centerX" id="Y7P-wN-BaI"/>
                             <constraint firstAttribute="centerX" secondItem="ant-2x-0cy" secondAttribute="centerX" id="Yrc-gH-RlS"/>
                             <constraint firstAttribute="trailing" secondItem="tPH-sw-Pfl" secondAttribute="trailing" constant="16" id="bBP-T1-1Tb"/>
                             <constraint firstAttribute="centerX" secondItem="1fw-Ug-BLR" secondAttribute="centerX" id="bQ5-Or-lE3"/>
-                            <constraint firstItem="Vqi-HY-T6B" firstAttribute="top" secondItem="xvb-bJ-pqo" secondAttribute="bottom" constant="8" id="kFq-Yo-Pig"/>
                             <constraint firstAttribute="centerX" secondItem="piB-s8-aWq" secondAttribute="centerX" id="lJr-Nw-mlQ"/>
                             <constraint firstAttribute="centerX" secondItem="TN8-Rr-dMQ" secondAttribute="centerX" id="pD2-nI-5XQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="piB-s8-aWq" secondAttribute="bottom" constant="20" id="pRP-GK-md6"/>
@@ -152,6 +154,19 @@
                             <constraint firstAttribute="trailing" secondItem="ssd-0r-drd" secondAttribute="trailing" constant="16" id="x5G-1U-wVl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="uTX-Zb-h4e" id="eBd-d1-dMB"/>
+                        <outlet property="iceCubeMixLabel" destination="1fw-Ug-BLR" id="zAm-2L-OcH"/>
+                        <outlet property="iceCubeMixStepper" destination="fIe-lQ-rkj" id="jB1-da-Ltb"/>
+                        <outlet property="iceCubePurchaseLabel" destination="TN8-Rr-dMQ" id="jTF-93-s5O"/>
+                        <outlet property="iceCubePurchaseStepper" destination="ssd-0r-drd" id="p3m-cB-xnj"/>
+                        <outlet property="iceCubeTotalLabel" destination="6wQ-Vy-5Wj" id="fam-aB-slV"/>
+                        <outlet property="lemonMixLabel" destination="DfL-o8-MrZ" id="a7f-jb-wgx"/>
+                        <outlet property="lemonMixStepper" destination="YCY-RN-6Wf" id="p0A-yi-3St"/>
+                        <outlet property="lemonPurchaseLabel" destination="ant-2x-0cy" id="bl0-3d-WDl"/>
+                        <outlet property="lemonPurchaseStepper" destination="tPH-sw-Pfl" id="8Wy-6u-hhp"/>
+                        <outlet property="lemonTotalLabel" destination="JMR-Hr-lLw" id="5Kw-ZI-cgi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
