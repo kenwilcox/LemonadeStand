@@ -34,12 +34,27 @@ class ViewController: UIViewController {
 
   func checkBalance() {
     let lemons = Int(lemonPurchaseStepper.value)
-    let ice = Int(iceCubeMixStepper.value)
-    let ret = balance - ((lemons * lemonPrice) + (ice * icePrice))
+    let ice = Int(iceCubePurchaseStepper.value)
+    let lemonCost = (lemons * lemonPrice)
+    let iceCost = (ice * icePrice)
+    
+    let ret = balance - (lemonCost + iceCost)
     println("getBalance = \(ret)")
     
-    lemonPurchaseStepper.maximumValue = Double(balance - (balance / icePrice) / lemonPrice)
-    iceCubePurchaseStepper.maximumValue = Double(balance - (balance / lemonPrice) / icePrice)
+    // 10 - (lemons * lemonPrice) = 6
+    // 6 / lemonPrice = 3
+    // 3 + lemons = 5
+    
+    if lemonCost > 0 {
+      var temp = ret / lemonPrice
+      temp = temp + lemons
+      lemonPurchaseStepper.maximumValue = Double(temp)
+    }
+    if iceCost > 0 {
+      var temp = ret / icePrice
+      temp = temp + ice
+      iceCubePurchaseStepper.maximumValue = Double(temp)
+    }
   }
   
   @IBAction func lemonPurchaseValueChanged(sender: UIStepper) {
