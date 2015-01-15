@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1CE2E81A679D1300400546 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE1CE2E61A679D1300400546 /* LICENSE */; };
 		BE33AAB71A63A1340077B1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33AAB61A63A1340077B1DB /* AppDelegate.swift */; };
 		BE33AAB91A63A1340077B1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33AAB81A63A1340077B1DB /* ViewController.swift */; };
 		BE33AABC1A63A1340077B1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE33AABA1A63A1340077B1DB /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE1CE2E61A679D1300400546 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BE1CE2E71A679D1300400546 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE33AAB11A63A1340077B1DB /* LemonadeStand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonadeStand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE33AAB51A63A1340077B1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE33AAB61A63A1340077B1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 		BE33AAA81A63A1340077B1DB = {
 			isa = PBXGroup;
 			children = (
+				BE1CE2E61A679D1300400546 /* LICENSE */,
+				BE1CE2E71A679D1300400546 /* README.md */,
 				BE33AAB31A63A1340077B1DB /* LemonadeStand */,
 				BE33AAC91A63A1340077B1DB /* LemonadeStandTests */,
 				BE33AAB21A63A1340077B1DB /* Products */,
@@ -222,6 +227,7 @@
 				BE33AABC1A63A1340077B1DB /* Main.storyboard in Resources */,
 				BE33AAE31A63A2920077B1DB /* warm.png in Resources */,
 				BE33AAE11A63A2920077B1DB /* mild.png in Resources */,
+				BE1CE2E81A679D1300400546 /* LICENSE in Resources */,
 				BE33AADF1A63A2920077B1DB /* Cold@2x.png in Resources */,
 				BE33AAE21A63A2920077B1DB /* Mild@2x.png in Resources */,
 				BE33AADE1A63A2920077B1DB /* cold.png in Resources */,
@@ -439,6 +445,7 @@
 				BE33AAD21A63A1340077B1DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE33AAD31A63A1340077B1DB /* Build configuration list for PBXNativeTarget "LemonadeStandTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +454,7 @@
 				BE33AAD51A63A1340077B1DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
