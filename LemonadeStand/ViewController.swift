@@ -58,37 +58,30 @@ class ViewController: UIViewController {
   }
   
   @IBAction func lemonPurchaseValueChanged(sender: UIStepper) {
-    var totalLemons = Int(lemonPurchaseStepper.value)
+    let totalLemons = Int(lemonPurchaseStepper.value)
     lemonPurchaseLabel.text = totalLemons.description
     checkBalance()
   }
   
   @IBAction func iceCubePurchaseValueChanged(sender: UIStepper) {
-    var totalIce = Int(iceCubePurchaseStepper.value)
+    let totalIce = Int(iceCubePurchaseStepper.value)
     iceCubePurchaseLabel.text = totalIce.description
     checkBalance()
   }
   
   @IBAction func lemonMixValueChanged(sender: UIStepper) {
+    let mixLemons = Int(lemonMixStepper.value)
+    lemonMixLabel.text = mixLemons.description
   }
   
   @IBAction func iceCubeMixValueChange(sender: UIStepper) {
+    let mixIce = Int(iceCubeMixStepper.value)
+    iceCubeMixLabel.text = mixIce.description
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-  /*
-  override func viewDidLoad() {
-  super.viewDidLoad()
-  
-  stepper.wraps = true
-  stepper.autorepeat = true
-  stepper.maximumValue = 10
-  }
-
-*/
 }
 
