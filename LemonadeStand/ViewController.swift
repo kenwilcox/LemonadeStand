@@ -31,6 +31,11 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 
   func checkBalance() {
     let lemons = Int(lemonPurchaseStepper.value)
@@ -78,10 +83,11 @@ class ViewController: UIViewController {
     let mixIce = Int(iceCubeMixStepper.value)
     iceCubeMixLabel.text = mixIce.description
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  
+  func showAlertWithText (header : String = "Warning", message : String) {
+    var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+    self.presentViewController(alert, animated: true, completion: nil)
   }
 }
 
