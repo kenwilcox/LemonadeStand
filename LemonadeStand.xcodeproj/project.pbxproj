@@ -20,6 +20,8 @@
 		BE33AAE21A63A2920077B1DB /* Mild@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE33AADB1A63A2920077B1DB /* Mild@2x.png */; };
 		BE33AAE31A63A2920077B1DB /* warm.png in Resources */ = {isa = PBXBuildFile; fileRef = BE33AADC1A63A2920077B1DB /* warm.png */; };
 		BE33AAE41A63A2920077B1DB /* Warm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE33AADD1A63A2920077B1DB /* Warm@2x.png */; };
+		BEE4E8AD1A6DDD2200F017FC /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE4E8AC1A6DDD2200F017FC /* Price.swift */; };
+		BEE4E8AF1A6DDD2D00F017FC /* Supplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE4E8AE1A6DDD2D00F017FC /* Supplies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		BE33AADB1A63A2920077B1DB /* Mild@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mild@2x.png"; sourceTree = "<group>"; };
 		BE33AADC1A63A2920077B1DB /* warm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warm.png; sourceTree = "<group>"; };
 		BE33AADD1A63A2920077B1DB /* Warm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Warm@2x.png"; sourceTree = "<group>"; };
+		BEE4E8AC1A6DDD2200F017FC /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		BEE4E8AE1A6DDD2D00F017FC /* Supplies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				BE33AAD61A63A2920077B1DB /* Images */,
 				BE33AAB61A63A1340077B1DB /* AppDelegate.swift */,
+				BEE4E8AC1A6DDD2200F017FC /* Price.swift */,
+				BEE4E8AE1A6DDD2D00F017FC /* Supplies.swift */,
 				BE33AAB81A63A1340077B1DB /* ViewController.swift */,
 				BE33AABA1A63A1340077B1DB /* Main.storyboard */,
 				BE33AABD1A63A1340077B1DB /* Images.xcassets */,
@@ -252,6 +258,8 @@
 			files = (
 				BE33AAB91A63A1340077B1DB /* ViewController.swift in Sources */,
 				BE33AAB71A63A1340077B1DB /* AppDelegate.swift in Sources */,
+				BEE4E8AF1A6DDD2D00F017FC /* Supplies.swift in Sources */,
+				BEE4E8AD1A6DDD2200F017FC /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
