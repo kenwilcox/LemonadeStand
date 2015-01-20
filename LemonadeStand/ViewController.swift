@@ -23,65 +23,55 @@ class ViewController: UIViewController {
   @IBOutlet weak var lemonMixStepper: UIStepper!
   @IBOutlet weak var iceCubeMixStepper: UIStepper!
   
-  var balance = 10
-  let lemonPrice = 2
-  let icePrice = 1
+  var supplies = Supplies(money: 10, lemons: 1, iceCubes: 1)
+  var price = Price()
+  
+  var lemonsToPurchase = 0
+  var iceCubesToPurchase = 0
+  var lemonsToMix = 0
+  var iceCubesToMix = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    updateMainView()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-  func checkBalance() {
-    let lemons = Int(lemonPurchaseStepper.value)
-    let ice = Int(iceCubePurchaseStepper.value)
-    let lemonCost = (lemons * lemonPrice)
-    let iceCost = (ice * icePrice)
-    
-    let ret = balance - (lemonCost + iceCost)
-    println("getBalance = \(ret)")
-    
-    // 10 - (lemons * lemonPrice) = 6
-    // 6 / lemonPrice = 3
-    // 3 + lemons = 5
-    
-    if lemonCost > 0 {
-      var temp = ret / lemonPrice
-      temp = temp + lemons
-      lemonPurchaseStepper.maximumValue = Double(temp)
-    }
-    if iceCost > 0 {
-      var temp = ret / icePrice
-      temp = temp + ice
-      iceCubePurchaseStepper.maximumValue = Double(temp)
-    }
-  }
   
   @IBAction func lemonPurchaseValueChanged(sender: UIStepper) {
-    let totalLemons = Int(lemonPurchaseStepper.value)
-    lemonPurchaseLabel.text = totalLemons.description
-    checkBalance()
+    lemonsToPurchase = Int(lemonPurchaseStepper.value)
+    updateMainView()
   }
   
   @IBAction func iceCubePurchaseValueChanged(sender: UIStepper) {
-    let totalIce = Int(iceCubePurchaseStepper.value)
-    iceCubePurchaseLabel.text = totalIce.description
-    checkBalance()
+    iceCubesToPurchase = Int(iceCubePurchaseStepper.value)
+    updateMainView()
   }
   
   @IBAction func lemonMixValueChanged(sender: UIStepper) {
-    let mixLemons = Int(lemonMixStepper.value)
-    lemonMixLabel.text = mixLemons.description
+    lemonsToMix = Int(lemonMixStepper.value)
+    updateMainView()
   }
   
   @IBAction func iceCubeMixValueChange(sender: UIStepper) {
-    let mixIce = Int(iceCubeMixStepper.value)
-    iceCubeMixLabel.text = mixIce.description
+    iceCubesToMix = Int(iceCubeMixStepper.value)
+    updateMainView()
+  }
+  
+  func updateMainView() {
+    balanceLabel.text = "$\(supplies.money)"
+    lemonTotalLabel.text = "\(supplies.lemons) Lemons"
+    iceCubeTotalLabel.text = "\(supplies.iceCubes) Ice Cubes"
+    
+    lemonPurchaseLabel.text = "\(lemonsToPurchase)"
+    iceCubePurchaseLabel.text = "\(iceCubesToPurchase)"
+    
+    lemonMixLabel.text = "\(lemonsToMix)"
+    iceCubeMixLabel.text = "\(iceCubesToMix)"
   }
   
   func showAlertWithText (header : String = "Warning", message : String) {
