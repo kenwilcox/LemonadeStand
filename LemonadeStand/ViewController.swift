@@ -43,6 +43,24 @@ class ViewController: UIViewController {
   }
   
   @IBAction func lemonPurchaseValueChanged(sender: UIStepper) {
+    if lemonsToPurchase > Int(lemonPurchaseStepper.value) {
+      //println("subtracting")
+      supplies.money += price.lemon
+      supplies.lemons -= 1
+    }
+    else {
+      //println("adding")
+      if supplies.money >= price.lemon {
+        supplies.money -= price.lemon
+        supplies.lemons += 1
+        
+      } else {
+        lemonPurchaseStepper.value -= 1
+        lemonPurchaseStepper.maximumValue = lemonPurchaseStepper.value
+        //showAlertWithText(message:"You don't have enough money")
+      }
+    }
+    
     lemonsToPurchase = Int(lemonPurchaseStepper.value)
     updateMainView()
   }
