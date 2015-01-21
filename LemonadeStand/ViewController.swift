@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         supplies.lemons += 1
         
       } else {
+        // Do this "else" check after updateMainView?
         lemonPurchaseStepper.value -= 1
         lemonPurchaseStepper.maximumValue = lemonPurchaseStepper.value
         //showAlertWithText(message:"You don't have enough money")
