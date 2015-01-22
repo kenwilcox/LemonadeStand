@@ -132,21 +132,25 @@ class ViewController: UIViewController {
     
     let lemonadeRatio = Float(lemonsToMix) / Float(iceCubesToMix)
     println("lemonade ratio: \(lemonadeRatio)")
-    
+
+    var paidCustomers = 0
     for x in 0...customers {
       
       let preference = Double(arc4random_uniform(UInt32(100))) / 100
       
       if preference < 0.4 && lemonadeRatio > 1 {
         supplies.money += 1
+        paidCustomers += 1
         println("Paid")
       }
       else if preference > 0.6 && lemonadeRatio < 1 {
         supplies.money += 1
+        paidCustomers += 1
         println("Paid")
       }
       else if preference <= 0.6 && preference >= 0.4 && lemonadeRatio == 1 {
         supplies.money += 1
+        paidCustomers += 1
         println("Paid")
       }
       else {
@@ -159,7 +163,13 @@ class ViewController: UIViewController {
     lemonsToMix = 0
     iceCubesToMix = 0
     
+    lemonPurchaseStepper.value = 0
+    iceCubePurchaseStepper.value = 0
+    lemonMixStepper.value = 0
+    iceCubeMixStepper.value = 0
+    
     updateMainView()
+    showAlertWithText(header: "Today's status", message: "You had \(customers) customers and \(paidCustomers) purchased lemonade")
   }
   
   func updateMainView() {
