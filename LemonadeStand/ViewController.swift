@@ -86,6 +86,21 @@ class ViewController: UIViewController {
   }
   
   @IBAction func lemonMixValueChanged(sender: UIStepper) {
+    if lemonsToMix > Int(lemonMixStepper.value) {
+      if lemonsToMix > 0 {
+        supplies.lemons += 1
+        lemonsToMix -= 1
+      }
+    }
+    else {
+      if supplies.lemons > 0 {
+        supplies.lemons -= 1
+        lemonsToMix += 1
+      } else {
+        lemonMixStepper.value -= 1
+        showAlertWithText(header: "Oops", message: "No more lemons in inventory")
+      }
+    }
     lemonsToMix = Int(lemonMixStepper.value)
     updateMainView()
   }
@@ -98,7 +113,7 @@ class ViewController: UIViewController {
       }
     }
     else {
-      if supplies.iceCubes >= 1 {
+      if supplies.iceCubes > 0 {
         supplies.iceCubes -= 1
         iceCubesToMix += 1
       } else {
