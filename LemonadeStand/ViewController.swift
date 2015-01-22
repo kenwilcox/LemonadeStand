@@ -91,6 +91,22 @@ class ViewController: UIViewController {
   }
   
   @IBAction func iceCubeMixValueChange(sender: UIStepper) {
+    if iceCubesToMix > Int(iceCubeMixStepper.value) {
+      if iceCubesToMix > 0 {
+        supplies.iceCubes += 1
+        iceCubesToMix -= 1
+      }
+    }
+    else {
+      if supplies.iceCubes >= 1 {
+        supplies.iceCubes -= 1
+        iceCubesToMix += 1
+      } else {
+        iceCubeMixStepper.value -= 1
+        showAlertWithText(header: "Oops", message: "No more ice in inventory")
+      }
+    }
+    
     iceCubesToMix = Int(iceCubeMixStepper.value)
     updateMainView()
   }
