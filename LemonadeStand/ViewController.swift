@@ -126,6 +126,42 @@ class ViewController: UIViewController {
     updateMainView()
   }
   
+  @IBAction func startDayButtonPressed(sender: AnyObject) {
+    let customers = Int(arc4random_uniform(UInt32(11)))
+    println("customers: \(customers)")
+    
+    let lemonadeRatio = Float(lemonsToMix) / Float(iceCubesToMix)
+    println("lemonade ratio: \(lemonadeRatio)")
+    
+    for x in 0...customers {
+      
+      let preference = Double(arc4random_uniform(UInt32(100))) / 100
+      
+      if preference < 0.4 && lemonadeRatio > 1 {
+        supplies.money += 1
+        println("Paid")
+      }
+      else if preference > 0.6 && lemonadeRatio < 1 {
+        supplies.money += 1
+        println("Paid")
+      }
+      else if preference <= 0.6 && preference >= 0.4 && lemonadeRatio == 1 {
+        supplies.money += 1
+        println("Paid")
+      }
+      else {
+        println("no match, no revenue")
+      }
+    }
+    
+    lemonsToPurchase = 0
+    iceCubesToPurchase = 0
+    lemonsToMix = 0
+    iceCubesToMix = 0
+    
+    updateMainView()
+  }
+  
   func updateMainView() {
     balanceLabel.text = "$\(supplies.money)"
     lemonTotalLabel.text = "\(supplies.lemons) Lemons"
