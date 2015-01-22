@@ -142,8 +142,9 @@ class ViewController: UIViewController {
     let lemonadeRatio = Float(lemonsToMix) / Float(iceCubesToMix)
     println("lemonade ratio: \(lemonadeRatio)")
 
+    var paidCustomers = 0
+    
     if !lemonadeRatio.isNaN {
-      var paidCustomers = 0
       for x in 0...customers {
         
         let preference = Double(arc4random_uniform(UInt32(100))) / 100
