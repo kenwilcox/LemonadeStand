@@ -31,6 +31,8 @@ class ViewController: UIViewController {
   var lemonsToMix = 0
   var iceCubesToMix = 0
   
+  let outOfMoney = "You don't have enough money"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -44,21 +46,18 @@ class ViewController: UIViewController {
   
   @IBAction func lemonPurchaseValueChanged(sender: UIStepper) {
     if lemonsToPurchase > Int(lemonPurchaseStepper.value) {
-      //println("subtracting")
       supplies.money += price.lemon
       supplies.lemons -= 1
     }
     else {
-      //println("adding")
       if supplies.money >= price.lemon {
         supplies.money -= price.lemon
         supplies.lemons += 1
-        
       } else {
         // Do this "else" check after updateMainView?
         lemonPurchaseStepper.value -= 1
-        lemonPurchaseStepper.maximumValue = lemonPurchaseStepper.value
-        //showAlertWithText(message:"You don't have enough money")
+        //lemonPurchaseStepper.maximumValue = lemonPurchaseStepper.value
+        showAlertWithText(message: outOfMoney)
       }
     }
     
@@ -67,6 +66,21 @@ class ViewController: UIViewController {
   }
   
   @IBAction func iceCubePurchaseValueChanged(sender: UIStepper) {
+    if iceCubesToPurchase > Int(iceCubePurchaseStepper.value) {
+      supplies.money += price.ice
+      supplies.iceCubes -= 1
+    }
+    else {
+      if supplies.money >= price.ice {
+        supplies.money -= price.ice
+        supplies.iceCubes += 1
+      } else {
+        iceCubePurchaseStepper.value -= 1
+        //iceCubePurchaseStepper.maximumValue = iceCubePurchaseStepper.value
+        showAlertWithText(message: outOfMoney)
+      }
+    }
+    
     iceCubesToPurchase = Int(iceCubePurchaseStepper.value)
     updateMainView()
   }
