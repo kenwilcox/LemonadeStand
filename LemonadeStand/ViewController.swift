@@ -137,10 +137,10 @@ class ViewController: UIViewController {
     let average = findAverage(weatherToday)
     
     let customers = Int(arc4random_uniform(UInt32(average)))
-    println("customers: \(customers)")
+//    println("customers: \(customers)")
     
     let lemonadeRatio = Float(lemonsToMix) / Float(iceCubesToMix)
-    println("lemonade ratio: \(lemonadeRatio)")
+//    println("lemonade ratio: \(lemonadeRatio)")
 
     var paidCustomers = 0
     
@@ -152,21 +152,21 @@ class ViewController: UIViewController {
         if preference < 0.4 && lemonadeRatio > 1 {
           supplies.money += 1
           paidCustomers += 1
-          println("Paid")
+//          println("Paid")
         }
         else if preference > 0.6 && lemonadeRatio < 1 {
           supplies.money += 1
           paidCustomers += 1
-          println("Paid")
+//          println("Paid")
         }
         else if preference <= 0.6 && preference >= 0.4 && lemonadeRatio == 1 {
           supplies.money += 1
           paidCustomers += 1
-          println("Paid")
+//          println("Paid")
         }
-        else {
-          println("no match, no revenue")
-        }
+//        else {
+//          println("no match, no revenue")
+//        }
       }
     } else {
       showAlertWithText(header: "Mix Something", message: "You didn't mix anything, you'll need to do that first")
