@@ -168,23 +168,26 @@ class ViewController: UIViewController {
 //          println("no match, no revenue")
 //        }
       }
+      
+      lemonsToPurchase = 0
+      iceCubesToPurchase = 0
+      lemonsToMix = 0
+      iceCubesToMix = 0
+      
+      lemonPurchaseStepper.value = 0
+      iceCubePurchaseStepper.value = 0
+      lemonMixStepper.value = 0
+      iceCubeMixStepper.value = 0
+      
+      simulateWeatherToday()
+      updateMainView()
+      showAlertWithText(header: "Today's status", message: "You had \(customers) customers and \(paidCustomers) purchased lemonade")
+      
+      
     } else {
       showAlertWithText(header: "Mix Something", message: "You didn't mix anything, you'll need to do that first")
     }
     
-    lemonsToPurchase = 0
-    iceCubesToPurchase = 0
-    lemonsToMix = 0
-    iceCubesToMix = 0
-    
-    lemonPurchaseStepper.value = 0
-    iceCubePurchaseStepper.value = 0
-    lemonMixStepper.value = 0
-    iceCubeMixStepper.value = 0
-    
-    simulateWeatherToday()
-    updateMainView()
-    showAlertWithText(header: "Today's status", message: "You had \(customers) customers and \(paidCustomers) purchased lemonade")
   }
   
   func updateMainView() {
