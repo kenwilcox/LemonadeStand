@@ -39,8 +39,8 @@
                                         <color key="textColor" red="0.0" green="0.761527534965035" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Lemon" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMR-Hr-lLw">
-                                        <rect key="frame" x="484" y="49" width="67" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 Lemon" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMR-Hr-lLw">
+                                        <rect key="frame" x="455" y="49" width="96" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="8dp-YG-t1o"/>
                                         </constraints>
@@ -49,16 +49,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Ice Cube" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wQ-Vy-5Wj">
-                                        <rect key="frame" x="467" y="78" width="84" height="21"/>
+                                        <rect key="frame" x="455" y="78" width="96" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="84" id="cKf-jz-maj"/>
+                                            <constraint firstAttribute="width" constant="96" id="cKf-jz-maj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="JMR-Hr-lLw" firstAttribute="trailing" secondItem="uTX-Zb-h4e" secondAttribute="trailing" id="2Ke-tk-kxd"/>
                                     <constraint firstAttribute="bottom" secondItem="6wQ-Vy-5Wj" secondAttribute="bottom" constant="13" id="6Tl-iA-FHx"/>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </stepper>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="TN8-Rr-dMQ" firstAttribute="top" secondItem="ant-2x-0cy" secondAttribute="bottom" constant="16" id="751-iz-17i"/>
                                     <constraint firstItem="TN8-Rr-dMQ" firstAttribute="top" secondItem="Y5w-T5-YYM" secondAttribute="top" constant="37" id="9JJ-xc-8tL"/>
@@ -216,7 +216,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.58397399390000004" blue="0.49294701889999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="fIe-lQ-rkj" firstAttribute="top" secondItem="YCY-RN-6Wf" secondAttribute="bottom" constant="15" id="280-lu-P57"/>
                                     <constraint firstItem="1fw-Ug-BLR" firstAttribute="firstBaseline" secondItem="Czq-d5-QYR" secondAttribute="firstBaseline" id="6jU-1S-2P1"/>
@@ -259,7 +259,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.76152753500000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="piB-s8-aWq" firstAttribute="centerX" secondItem="7ym-t6-VC8" secondAttribute="centerX" id="9MI-cS-Q9K"/>
                                     <constraint firstItem="piB-s8-aWq" firstAttribute="top" secondItem="7ym-t6-VC8" secondAttribute="top" constant="45" id="HpL-vF-6z8"/>
@@ -302,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="370"/>
+            <point key="canvasLocation" x="278" y="371"/>
         </scene>
     </scenes>
 </document>
