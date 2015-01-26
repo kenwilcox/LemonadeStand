@@ -136,7 +136,7 @@ class ViewController: UIViewController {
   @IBAction func startDayButtonPressed(sender: AnyObject) {
     let average = findAverage(weatherToday)
     
-    let customers = Int(arc4random_uniform(UInt32(average)))
+    let customers = Int(arc4random_uniform(UInt32(abs(average))))
 //    println("customers: \(customers)")
     
     let lemonadeRatio = Float(lemonsToMix) / Float(iceCubesToMix)
