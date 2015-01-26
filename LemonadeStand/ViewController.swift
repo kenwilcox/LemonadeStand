@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 
   var weatherArray: [[Int]] = [[-10, -9, -5, -7], [5, 8, 10, 9], [22, 25, 27, 23]]
   var weatherToday: [Int] = [0, 0, 0, 0]
-  var weatherImageView: UIImageView = UIImageView(frame: CGRectMake(20, 50, 50, 50))
+  var weatherImageView: UIImageView = UIImageView(frame: CGRect(x:20, y:50, width:50, height:50))
   
   override func viewDidLoad() {
     super.viewDidLoad()
